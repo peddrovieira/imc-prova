@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Prova</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+</resources>
