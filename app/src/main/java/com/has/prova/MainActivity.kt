@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         var IMC = peso/(altura * altura)
 
+
         if(IMC <= 18.5){
             val pesoImage: ImageView = findViewById(R.id.img)
             pesoImage.setImageResource(R.drawable.abaixodopeso1)
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             binding.imcvalor.text =  IMC.toString()
             binding.valorpeso.text = "Abaixo do Peso"
         }
-        else if(IMC > 18.6 && IMC < 24.9){
+        else if(IMC > 18.6 && IMC <= 24.9){
             val pesoImage: ImageView = findViewById(R.id.img)
             pesoImage.setImageResource(R.drawable.pesoideal1)
 
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             binding.valorpeso.text = "Peso Ideal"
 
         }
-        else if(IMC <25 && IMC <29.9){
+        else if(IMC > 25 && IMC <= 29.9){
             val pesoImage: ImageView = findViewById(R.id.img)
             pesoImage.setImageResource(R.drawable.sobre_peso1)
 
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             binding.valorpeso.text = "Sobre Peso "
 
         }
-        else if(IMC > 30 && IMC > 34.9){
+        else if(IMC > 30 && IMC  <= 34.9){
             val pesoImage: ImageView = findViewById(R.id.img)
             pesoImage.setImageResource(R.drawable.obesidade1)
 
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             binding.valorpeso.text = "Obesidade"
 
         }
-        else if (IMC >35 && IMC < 39.9){
+        else if (IMC > 35 && IMC <= 39.9){
             val pesoImage: ImageView = findViewById(R.id.img)
             pesoImage.setImageResource(R.drawable.iniciodaobesidade1)
 
