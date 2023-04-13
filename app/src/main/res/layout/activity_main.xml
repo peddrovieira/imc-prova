@@ -78,13 +78,11 @@
         tools:text="30,5" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="166dp"
-        android:layout_height="145dp"
-        app:layout_constraintBottom_toTopOf="@+id/imcvalor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imcformula" />
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="51dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
