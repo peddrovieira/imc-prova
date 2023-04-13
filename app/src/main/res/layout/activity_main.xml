@@ -10,14 +10,14 @@
         android:id="@+id/pesonum"
         android:layout_width="262dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="340dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toEndOf="@+id/peso"
-        app:layout_constraintTop_toBottomOf="@+id/imcvalor" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/alturanum"
@@ -56,10 +56,11 @@
 
     <Button
         android:id="@+id/calcular"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/app_name"
+        android:text="@string/Calcular"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,20 +70,24 @@
         android:id="@+id/imcvalor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="288dp"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="30,5" />
 
-    <ImageView
-        android:id="@+id/img"
+    <TextView
+        android:id="@+id/valorpeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="51dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginBottom="12dp"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/imcvalor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Peso Ideal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

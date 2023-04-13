@@ -23,44 +23,51 @@ class MainActivity : AppCompatActivity() {
         val alturaInTextField = binding.alturanum.text.toString()
         val altura = alturaInTextField.toDouble()
         val imcvalor = binding.imcvalor.text.toString()
+        val valorpeso = binding.valorpeso.text.toString()
 
         var IMC = peso/(altura*altura)
 
         if(IMC <18.5){
             val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.abaixodopeso)
-            binding.imcvalor.text = IMC.toString()
-        }
-        else if(IMC <18.5){
-            val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.pesoideal)
-            binding.imcvalor.text = IMC.toString()
 
+            binding.imcvalor.text =  IMC.toString()
+            binding.valorpeso.text = "Abaixo do Peso"
         }
         else if(IMC > 18.6 && IMC < 24.9){
             val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.sobre_peso)
-            binding.imcvalor.text = IMC.toString()
+
+            binding.imcvalor.text =  IMC.toString()
+            binding.valorpeso.text = "Abaixo do Peso"
 
         }
         else if(IMC <25 && IMC <29.9){
             val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.iniciodaobesidade)
-            binding.imcvalor.text = IMC.toString()
+
+            binding.imcvalor.text =  IMC.toString()
+            binding.valorpeso.text = "Sobre Peso "
 
         }
         else if(IMC > 30 && IMC > 34.9){
             val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.obesidade)
-            binding.imcvalor.text = IMC.toString()
+
+            binding.imcvalor.text =  IMC.toString()
+            binding.valorpeso.text = "Obesidade"
 
         }
-        else{
+        else if (IMC >35 && IMC < 39.9){
             val pesoImage: ImageView = findViewById(R.id.img)
-            pesoImage.setImageResource(R.drawable.excessodeobesidade)
-            binding.imcvalor.text = IMC.toString()
+
+            binding.imcvalor.text =  IMC.toString()
+            binding.valorpeso.text = "Inicio da obesidade"
 
         }
+        else {
+            val pesoImage: ImageView = findViewById(R.id.img)
+
+            binding.imcvalor.text =   IMC.toString()
+            binding.valorpeso.text = "Excesso de obesidade"
+        }
+
 
         }
 
