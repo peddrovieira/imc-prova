@@ -25,23 +25,26 @@ class MainActivity : AppCompatActivity() {
         val imcvalor = binding.imcvalor.text.toString()
         val valorpeso = binding.valorpeso.text.toString()
 
-        var IMC = peso/(altura*altura)
+        var IMC = peso/(altura * altura)
 
-        if(IMC <18.5){
+        if(IMC <= 18.5){
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.abaixodopeso1)
 
             binding.imcvalor.text =  IMC.toString()
             binding.valorpeso.text = "Abaixo do Peso"
         }
         else if(IMC > 18.6 && IMC < 24.9){
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.pesoideal1)
 
             binding.imcvalor.text =  IMC.toString()
-            binding.valorpeso.text = "Abaixo do Peso"
+            binding.valorpeso.text = "Peso Ideal"
 
         }
         else if(IMC <25 && IMC <29.9){
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.sobre_peso1)
 
             binding.imcvalor.text =  IMC.toString()
             binding.valorpeso.text = "Sobre Peso "
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
         else if(IMC > 30 && IMC > 34.9){
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.obesidade1)
 
             binding.imcvalor.text =  IMC.toString()
             binding.valorpeso.text = "Obesidade"
@@ -56,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
         else if (IMC >35 && IMC < 39.9){
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.iniciodaobesidade1)
 
             binding.imcvalor.text =  IMC.toString()
             binding.valorpeso.text = "Inicio da obesidade"
@@ -63,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             val pesoImage: ImageView = findViewById(R.id.img)
+            pesoImage.setImageResource(R.drawable.excessodeobesidade1)
 
             binding.imcvalor.text =   IMC.toString()
             binding.valorpeso.text = "Excesso de obesidade"

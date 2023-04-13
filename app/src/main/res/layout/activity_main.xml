@@ -90,4 +90,14 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Peso Ideal" />
 
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="327dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/valorpeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imcformula1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
